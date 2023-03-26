@@ -5,21 +5,27 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{343585E2-8828-4041-9DFB-23FBA71CE70E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsService", "src\WindowsService\WindowsService.csproj", "{322D1F49-AAFF-4DC0-8352-40EAC88D58E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsService", "src\WindowsService\WindowsService.csproj", "{322D1F49-AAFF-4DC0-8352-40EAC88D58E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{2D0BED4E-FFA5-4832-8156-1AFA22C688E4}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{322D1F49-AAFF-4DC0-8352-40EAC88D58E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{322D1F49-AAFF-4DC0-8352-40EAC88D58E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{322D1F49-AAFF-4DC0-8352-40EAC88D58E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{322D1F49-AAFF-4DC0-8352-40EAC88D58E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{322D1F49-AAFF-4DC0-8352-40EAC88D58E9} = {343585E2-8828-4041-9DFB-23FBA71CE70E}
