@@ -15,6 +15,9 @@ namespace Havagan.Example.CoreWindowsServiceOnFullFramework;
 /// </remarks>
 public class Program
 {
+    /// <summary>
+    /// The application/installed Windows service name.
+    /// </summary>
     internal const string ApplicationName = "Havagan.Example.CoreWindowsServiceOnFullFramework";
 
     /// <summary>
@@ -49,7 +52,7 @@ public class Program
                 .UseConsoleLifetime()
                 .UseWindowsService(options =>
                 {
-                    options.ServiceName = nameof(WorkerService);
+                    options.ServiceName = ApplicationName;
                 })
                 .ConfigureAppConfiguration((ctx, builder) =>
                 {

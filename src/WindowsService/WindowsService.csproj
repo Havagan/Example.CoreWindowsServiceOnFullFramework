@@ -8,6 +8,7 @@
 		<NoDefaultLaunchSettingsFile>true</NoDefaultLaunchSettingsFile>
 		<LangVersion>latest</LangVersion>
 		<RootNamespace>Havagan.Example.CoreWindowsServiceOnFullFramework</RootNamespace>
+		<AssemblyName>Havagan.Example.CoreWindowsServiceOnFullFramework.WindowsService</AssemblyName>
 	</PropertyGroup>
 
 	<ItemGroup>
