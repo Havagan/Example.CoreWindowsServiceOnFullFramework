@@ -1,0 +1,41 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - '.github/**'
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - '.github/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: [ ubuntu-latest ]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+    
+    - name: Clean
+      run: dotnet clean --configuration Release
+      
+    - name: Add nuget source
+      run: dotnet nuget add source --username '${{ github.repository_owner }}' --password '${{ secrets.READ_PACKAGES_TOKEN }}' --store-password-in-clear-text --name github 'https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --no-restore --configuration Release
+      
+    - name: Test
+      run: dotnet test --no-build --verbosity normal --configuration Release
